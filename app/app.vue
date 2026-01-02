@@ -1,4 +1,7 @@
 <script setup lang="ts">
+import AppHeader from './layouts/AppHeader.vue';
+import LeftBar from './layouts/LeftBar.vue';
+import RightBar from './layouts/RightBar.vue';
 import AboutSection from './sections/AboutSection.vue';
 import ContactSection from './sections/ContactSection.vue';
 import ExperiencesSection from './sections/ExperiencesSection.vue';
@@ -9,7 +12,10 @@ import ProjectsSection from './sections/ProjectsSection.vue';
 
 <template>
   <NuxtLayout>
-    <main>
+    <AppHeader />
+    <LeftBar />
+    <RightBar />
+    <main class="min-h-screen bg-(--bg-primary-color) overflow-x-hidden">
       <HeroSection />
       <AboutSection />
       <ExperiencesSection />
