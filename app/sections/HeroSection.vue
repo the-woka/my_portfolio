@@ -3,7 +3,7 @@
 </script>
 
 <template>
-    <section class="relative h-screen w-screen flex justify-center items-center">
+    <section class="relative h-screen w-screen flex justify-center items-center mb-20">
         <div>
             <h1 class="text-6xl mb-5 text-(--text-primary-color)">
                 yor<span class="text-(--tertiary-color)">.is()</span>
@@ -14,7 +14,7 @@
             <h5 class="text-lg text-(--text-tertiary-color) mb-6">
                 Software Engineer, ERP Developer, and Fullstack Developer.
             </h5>
-            <Button>Chat me!</Button>
+            <Button size="medium">Chat me!</Button>
         </div>
     </section>
 </template>

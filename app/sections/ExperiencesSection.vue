@@ -1,5 +1,5 @@
 <template>
-    <section class="relative h-screen w-screen flex justify-center items-start">
+    <section class="relative w-screen flex justify-center items-start mb-50">
         <div class="flex flex-col items-center">
             <h2 class="text-(--text-primary-color) text-2xl mb-10">
                 .experiences()

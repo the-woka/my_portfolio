@@ -15,7 +15,7 @@ import Button from '~/components/Button.vue';
             <a href="#" class="hover:text-(--tertiary-color)"><li>.experiences()</li></a>
             <a href="#" class="hover:text-(--tertiary-color)"><li>.projects()</li></a>
             <a href="#" class="hover:text-(--tertiary-color)"><li>.contact()</li></a>
-            <a href="#" class=""><li><Button>Resume</Button></li></a>
+            <a href="#" class=""><li><Button size="small">Resume</Button></li></a>
         </ul>
     </nav>
 </template>

@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import AppFooter from './layouts/AppFooter.vue';
 import AppHeader from './layouts/AppHeader.vue';
 import LeftBar from './layouts/LeftBar.vue';
 import RightBar from './layouts/RightBar.vue';
@@ -22,6 +23,7 @@ import ProjectsSection from './sections/ProjectsSection.vue';
       <ProjectsSection />
       <ContactSection />
     </main>
+    <AppFooter />
   </NuxtLayout>
 </template>
 
