@@ -22,19 +22,19 @@
                         </li>
                     </ul>
                 </div>
-                <div class="w-125 text-sm">
+                <div class="w-125">
                     <h4 class="text-lg text-(--text-primary-color) mb-1">
                         {{ experiences[activeTab].position }}
                         <span class="text-(--tertiary-color)">@ {{ experiences[activeTab].company }}</span>
                     </h4>
-                    <h6 class="text-(--text-tertiary-color) mb-6">
+                    <h6 class="text-(--text-secondary-color) mb-6 text-sm">
                         {{ experiences[activeTab].period }}
                     </h6>
                     <ul class="space-y-4">
                         <li 
                             v-for="(task, idx) in experiences[activeTab].tasks" 
                             :key="idx"
-                            class="flex gap-2 text-(--text-secondary-color)"
+                            class="flex gap-2 text-(--text-tertiary-color) text-xs"
                         >
                             <span class="text-(--tertiary-color) mt-1">▹</span>
                             <span>{{ task }}</span>
