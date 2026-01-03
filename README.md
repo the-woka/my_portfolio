@@ -7,7 +7,7 @@ Personal portfolio website showcasing my projects and experiences.
 - **Framework:** Nuxt 3
 - **Styling:** TailwindCSS
 - **Icons:** Nuxt Icon (https://icones.js.org/)
-- **Deployment:** Vercel (yoris-portfolio-e6jgcppn9-yoris-projects-274571c7.vercel.app)
+- **Deployment:** Vercel (https://yoris-portfolio.vercel.app/)
 
 ## Development
 ```bash
