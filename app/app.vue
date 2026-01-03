@@ -18,10 +18,10 @@ import ProjectsSection from './sections/ProjectsSection.vue';
     <RightBar />
     <main class="min-h-screen bg-(--bg-primary-color) overflow-x-hidden">
       <HeroSection />
-      <AboutSection />
-      <ExperiencesSection />
-      <ProjectsSection />
-      <ContactSection />
+      <AboutSection id="about"/>
+      <ExperiencesSection id="experiences" />
+      <ProjectsSection id="projects" />
+      <ContactSection id="contact" />
     </main>
     <AppFooter />
   </NuxtLayout>

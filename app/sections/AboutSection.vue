@@ -1,16 +1,16 @@
 <template>
-    <section class="relative w-screen flex justify-center items-center mb-50">
-        <div class="flex flex-col items-center">
+    <section class="relative flex justify-center items-center mb-50 px-10 md:px-30">
+        <div class="flex flex-col items-center max-w-7xl">
             <h2 class="text-(--text-primary-color) text-2xl mb-10">
                 .about()
             </h2>
-            <div class="flex gap-20">
-                <div class="space-y-3 text-(--text-tertiary-color) text-base w-125">
+            <div class="flex flex-col md:flex-row gap-10 md:gap-20 w-full">
+                <div class="space-y-3 text-(--text-tertiary-color) text-sm md:text-base w-full md:max-w-125">
                     <p v-for="(paragraph, index) in aboutText" :key="index">
                         <span v-html="paragraph"></span>
                     </p>
                 </div>
-                <div class="relative w-70 h-70 justify-self-end self-start">
+                <div class="relative w-70 md:w-70 h-70 md:h-full mx-auto md:mx-0">
                     <div class="absolute inset-0 translate-x-4 translate-y-4 border-2 border-(--tertiary-color) rounded-md"></div>
                     <img 
                         src="../assets/img/foto.webp" 
@@ -28,6 +28,6 @@ const aboutText = [
     '<span>Hello!</span> I\'m Yoris — developer, problem-solver, coffee enthusiast.',
     'I build apps that don\'t just work — they feel good to use. My sweet spot? Combining clean logic with creative solutions, whether that\'s debugging gnarly code or designing smooth user experiences.',
     'Here\'s my superpower: I find answers fast. That obscure bug? Solved. That perfect library? Found. If the solution exists, I\'ll track it down in record time.',
-    'I\'m all about leveling up, collaborating with great people, and shipping work I\'m proud of. So, <a href="#" class="text-(--tertiary-color) hover:underline hover:opacity-75">Let\'s connect</a> and build something awesome.'
+    'I\'m all about leveling up, collaborating with great people, and shipping work I\'m proud of. So, <a href="https://www.linkedin.com/in/adrian-yoris-mbake-woka/" target="_blank" class="text-(--tertiary-color) hover:underline hover:opacity-75">Let\'s connect</a> and build something awesome.'
 ]
 </script>

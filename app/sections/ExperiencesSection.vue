@@ -1,18 +1,19 @@
 <template>
-    <section class="relative w-screen flex justify-center items-start mb-50">
-        <div class="flex flex-col items-center">
+    <section class="relative flex justify-center items-start mb-50 px-10 md:px-30">
+        <div class="flex flex-col items-center max-w-7xl w-full">
             <h2 class="text-(--text-primary-color) text-2xl mb-10">
                 .experiences()
             </h2>
-            <div class="flex gap-10">
-                <div class="w-45 shrink-0 text-sm">
-                    <ul class="space-y-1">
+            <div class="flex flex-col justify-center md:flex-row gap-10 w-full">
+                <div class="w-full md:w-45 md:shrink-0 text-sm">
+                    <ul class="flex md:flex-col gap-2 md:gap-0 md:space-y-1 overflow-x-auto md:overflow-x-visible pb-2 md:pb-0">
                         <li 
                             v-for="(exp, index) in experiences" 
                             :key="index"
                             @click="activeTab = index"
                             :class="[
-                                'cursor-pointer py-4 px-4 border-l-2 transition-all duration-200',
+                                'cursor-pointer py-4 px-4 transition-all duration-200 whitespace-nowrap md:whitespace-normal',
+                                'border-b-2 md:border-b-0 md:border-l-2',
                                 activeTab === index 
                                     ? 'border-(--tertiary-color) bg-(--bg-secondary-color) text-(--tertiary-color)' 
                                     : 'border-(--text-tertiary-color) text-(--text-tertiary-color) hover:bg-(--bg-secondary-color)'
@@ -22,19 +23,20 @@
                         </li>
                     </ul>
                 </div>
-                <div class="w-125">
-                    <h4 class="text-lg text-(--text-primary-color) mb-1">
+                
+                <div class="w-full md:w-125">
+                    <h4 class="text-base md:text-lg text-(--text-primary-color) mb-1">
                         {{ experiences[activeTab].position }}
                         <span class="text-(--tertiary-color)">@ {{ experiences[activeTab].company }}</span>
                     </h4>
-                    <h6 class="text-(--text-secondary-color) mb-6 text-sm">
+                    <h6 class="text-(--text-secondary-color) mb-6 text-xs md:text-sm">
                         {{ experiences[activeTab].period }}
                     </h6>
                     <ul class="space-y-4">
                         <li 
                             v-for="(task, idx) in experiences[activeTab].tasks" 
                             :key="idx"
-                            class="flex gap-2 text-(--text-tertiary-color) text-xs"
+                            class="flex gap-2 text-(--text-tertiary-color) text-xs md:text-sm"
                         >
                             <span class="text-(--tertiary-color) mt-1">▹</span>
                             <span>{{ task }}</span>
