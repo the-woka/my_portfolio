@@ -1,75 +1,31 @@
-# Nuxt Minimal Starter
+# Portfolio
 
-Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+Personal portfolio website showcasing my projects and experiences.
 
-## Setup
+## Tech Stack
 
-Make sure to install dependencies:
+- **Framework:** Nuxt 3
+- **Styling:** TailwindCSS
+- **Icons:** Nuxt Icon (https://icones.js.org/)
+- **Deployment:** Vercel (yoris-portfolio-e6jgcppn9-yoris-projects-274571c7.vercel.app)
 
+## Development
 ```bash
-# npm
+# Install dependencies
 npm install
 
-# pnpm
-pnpm install
-
-# yarn
-yarn install
-
-# bun
-bun install
-```
-
-## Development Server
-
-Start the development server on `http://localhost:3000`:
-
-```bash
-# npm
+# Run development server
 npm run dev
 
-# pnpm
-pnpm dev
-
-# yarn
-yarn dev
-
-# bun
-bun run dev
-```
-
-## Production
-
-Build the application for production:
-
-```bash
-# npm
+# Build for production
 npm run build
-
-# pnpm
-pnpm build
-
-# yarn
-yarn build
-
-# bun
-bun run build
 ```
 
-Locally preview production build:
+## Contact
 
-```bash
-# npm
-npm run preview
+- Email: ois.woka23@gmail.com
+- LinkedIn: [Adrian Yoris Mbake Woka](https://linkedin.com/in/adrian-yoris-mbake-woka)
+- GitHub: [the-woka](https://github.com/the-woka)
+---
 
-# pnpm
-pnpm preview
-
-# yarn
-yarn preview
-
-# bun
-bun run preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+Made with ❤️ & ☕
