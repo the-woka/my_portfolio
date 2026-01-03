@@ -18,15 +18,11 @@ const closeMenu = () => {
 const handleScroll = () => {
   const currentScrollY = window.scrollY;
   
-  // Detect if scrolled down from top (for blur effect)
   isScrolled.value = currentScrollY > 50;
   
-  // Hide navbar when scrolling down, show when scrolling up
   if (currentScrollY > lastScrollY.value && currentScrollY > 100) {
-    // Scrolling down & passed 100px
     isVisible.value = false;
   } else {
-    // Scrolling up
     isVisible.value = true;
   }
   
@@ -72,24 +68,28 @@ onUnmounted(() => {
             <a href="/files/CV-Adrian-Yoris.pdf" target="_blank" rel="noopener noreferrer" class=""><li><Button size="small">Resume</Button></li></a>
         </ul>
 
-        <button @click="toggleMenu" class="md:hidden text-(--tertiary-color) text-2xl cursor-pointer z-60 relative">
-            <Icon v-if="!isMenuOpen" name="bitcoin-icons:menu-outline" />
-            <Icon v-else name="bitcoin-icons:cross-outline" />
+        <button @click="toggleMenu" class="md:hidden text-(--tertiary-color) text-2xl cursor-pointer relative">
+            <Icon name="bitcoin-icons:menu-outline" />
         </button>
     </nav>
 
-    <!-- Mobile Menu Backdrop (Outside nav, blur seluruh layar) -->
     <div 
         v-if="isMenuOpen" 
         @click="closeMenu"
         class="md:hidden fixed inset-0 backdrop-blur-sm bg-black/20 z-40"
     ></div>
 
-    <!-- Mobile Menu Panel -->
     <div 
         v-if="isMenuOpen" 
         class="md:hidden fixed top-0 right-0 w-3/4 h-screen bg-(--bg-primary-color) shadow-lg z-50"
     >
+        <button 
+            @click="closeMenu" 
+            class="absolute top-6 right-6 text-(--tertiary-color) text-2xl cursor-pointer hover:rotate-90 transition-transform duration-300"
+        >
+            <Icon name="bitcoin-icons:cross-outline" />
+        </button>
+
         <ul class="flex flex-col gap-6 px-6 py-24 text-(--text-secondary-color) text-sm text-center">
             <a href="#about" @click="closeMenu" class="hover:text-(--tertiary-color)"><li>.about()</li></a>
             <a href="#experiences" @click="closeMenu" class="hover:text-(--tertiary-color)"><li>.experiences()</li></a>
