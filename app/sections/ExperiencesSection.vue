@@ -1,11 +1,18 @@
 <template>
-    <section class="relative flex justify-center items-start mb-50 px-10 md:px-30">
+    <section ref="sectionRef" class="relative flex justify-center items-start mb-50 px-10 md:px-30">
         <div class="flex flex-col items-center max-w-7xl w-full">
-            <h2 class="text-(--text-primary-color) text-2xl mb-10">
+            <h2 
+                class="text-(--text-primary-color) text-2xl mb-10 transition-all duration-800"
+                :class="{ 'opacity-0 translate-y-5': !isVisible, 'opacity-100 translate-y-0': isVisible }"
+            >
                 .experiences()
             </h2>
+            
             <div class="flex flex-col justify-center md:flex-row gap-10 w-full">
-                <div class="w-full md:w-45 md:shrink-0 text-sm">
+                <div 
+                    class="w-full md:w-45 md:shrink-0 text-sm transition-all duration-1000 delay-200"
+                    :class="{ 'opacity-0 -translate-x-8': !isVisible, 'opacity-100 translate-x-0': isVisible }"
+                >
                     <ul class="flex md:flex-col gap-2 md:gap-0 md:space-y-1 overflow-x-auto md:overflow-x-visible pb-2 md:pb-0">
                         <li 
                             v-for="(exp, index) in experiences" 
@@ -24,7 +31,10 @@
                     </ul>
                 </div>
                 
-                <div class="w-full md:w-125">
+                <div 
+                    class="w-full md:w-125 transition-all duration-1000 delay-400"
+                    :class="{ 'opacity-0 translate-x-8': !isVisible, 'opacity-100 translate-x-0': isVisible }"
+                >
                     <h4 class="text-base md:text-lg text-(--text-primary-color) mb-1">
                         {{ experiences[activeTab].position }}
                         <span class="text-(--tertiary-color)">@ {{ experiences[activeTab].company }}</span>
@@ -49,9 +59,11 @@
 </template>
 
 <script setup>
-import { ref } from 'vue'
+import { ref, onMounted, onUnmounted } from 'vue'
 
 const activeTab = ref(0)
+const sectionRef = ref(null)
+const isVisible = ref(false)
 
 const experiences = [
     {
@@ -77,4 +89,25 @@ const experiences = [
         ]
     }
 ]
+
+onMounted(() => {
+  const observer = new IntersectionObserver(
+    ([entry]) => {
+      if (entry.isIntersecting) {
+        isVisible.value = true
+      }
+    },
+    { threshold: 0.1 }
+  )
+
+  if (sectionRef.value) {
+    observer.observe(sectionRef.value)
+  }
+
+  onUnmounted(() => {
+    if (sectionRef.value) {
+      observer.unobserve(sectionRef.value)
+    }
+  })
+})
 </script>

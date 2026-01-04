@@ -49,7 +49,7 @@ onUnmounted(() => {
 <template>
     <nav 
         :class="[
-            'flex justify-between px-6 py-6 items-center fixed top-0 right-0 left-0 z-50 transition-all duration-300',
+            'flex justify-between px-6 py-6 items-center fixed top-0 right-0 left-0 z-50 transition-all duration-300 animate-fade-in-down',
             isVisible ? 'translate-y-0' : '-translate-y-full',
             isScrolled ? 'bg-(--bg-primary-color)/80 backdrop-blur-md shadow-lg' : 'bg-(--bg-primary-color)'
         ]"
@@ -76,12 +76,12 @@ onUnmounted(() => {
     <div 
         v-if="isMenuOpen" 
         @click="closeMenu"
-        class="md:hidden fixed inset-0 backdrop-blur-sm bg-black/20 z-40"
+        class="md:hidden fixed inset-0 backdrop-blur-sm bg-black/20 z-40 animate-fade-in"
     ></div>
 
     <div 
         v-if="isMenuOpen" 
-        class="md:hidden fixed top-0 right-0 w-3/4 h-screen bg-(--bg-primary-color) shadow-lg z-50"
+        class="md:hidden fixed top-0 right-0 w-3/4 h-screen bg-(--bg-primary-color) shadow-lg z-50 animate-slide-in-right"
     >
         <button 
             @click="closeMenu" 
@@ -99,3 +99,48 @@ onUnmounted(() => {
         </ul>
     </div>
 </template>
+
+<style scoped>
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+.animate-fade-in-down {
+  animation: fadeInDown 0.4s ease-out;
+  animation-delay: 0.4s;
+  animation-fill-mode: both;
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.3s ease-out;
+}
+
+.animate-slide-in-right {
+  animation: slideInRight 0.3s ease-out;
+}
+</style>
