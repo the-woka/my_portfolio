@@ -1,6 +1,6 @@
 <template>
     <div class="hidden md:flex fixed top-0 right-0 items-center h-screen pr-9 z-20 bg-(--bg-primary-color) animate-fade-in-right">
-        <a href="mailto:ois.woka23@gmail.com?subject=Let's%20Connect" class="text-(--text-tertiary-color) [writing-mode:vertical-rl] rotate-0 text-sm transition-transform duration-200 ease-out hover:-translate-y-1 hover:text-(--tertiary-color)">ois.woka23@gmail.com</a>
+        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=ois.woka23@gmail.com&su=Let's%20Connect" class="text-(--text-tertiary-color) [writing-mode:vertical-rl] rotate-0 text-sm transition-transform duration-200 ease-out hover:-translate-y-1 hover:text-(--tertiary-color)">ois.woka23@gmail.com</a>
     </div>
 </template>
 

@@ -65,7 +65,7 @@ onUnmounted(() => {
             <a href="#experiences" class="hover:text-(--tertiary-color)"><li>.experiences()</li></a>
             <a href="#projects" class="hover:text-(--tertiary-color)"><li>.projects()</li></a>
             <a href="#contact" class="hover:text-(--tertiary-color)"><li>.contact()</li></a>
-            <a href="/files/CV-Adrian-Yoris.pdf" target="_blank" rel="noopener noreferrer" class=""><li><Button size="small">Resume</Button></li></a>
+            <a href="/files/resume.pdf" target="_blank" rel="noopener noreferrer" class=""><li><Button size="small">Resume</Button></li></a>
         </ul>
 
         <button @click="toggleMenu" class="md:hidden text-(--tertiary-color) text-2xl cursor-pointer relative">
@@ -95,7 +95,7 @@ onUnmounted(() => {
             <a href="#experiences" @click="closeMenu" class="hover:text-(--tertiary-color)"><li>.experiences()</li></a>
             <a href="#projects" @click="closeMenu" class="hover:text-(--tertiary-color)"><li>.projects()</li></a>
             <a href="#contact" @click="closeMenu" class="hover:text-(--tertiary-color)"><li>.contact()</li></a>
-            <a href="/public/files/CV-Adrian-Yoris.pdf" target="_blank" rel="noopener noreferrer" @click="closeMenu" class="flex justify-center"><li><Button size="small">Resume</Button></li></a>
+            <a href="/files/CV-Adrian-Yoris.pdf" target="_blank" rel="noopener noreferrer" @click="closeMenu" class="flex justify-center"><li><Button size="small">Resume</Button></li></a>
         </ul>
     </div>
 </template>

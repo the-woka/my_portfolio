@@ -54,7 +54,7 @@ onMounted(() => {
                 class="transition-all duration-1000 delay-400"
                 :class="{ 'opacity-0 translate-y-8': !isVisible, 'opacity-100 translate-y-0': isVisible }"
             >
-                <a href="mailto:adrianyoris@gmail.com?subject=Let's%20Connect">
+                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=ois.woka23@gmail.com&su=Let's%20Connect">
                     <Button size="large">Say Hello</Button>
                 </a>
             </div>

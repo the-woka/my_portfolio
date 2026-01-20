@@ -15,8 +15,8 @@
                 Software Engineer, ERP Developer, and Fullstack Developer.
             </h5>
             <div class="flex md:justify-start animate-fade-in-delay-3">
-                <a href="mailto:adrianyoris@gmail.com?subject=Let's%20Connect">
-                    <Button size="medium">Chat me!</Button>
+                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=ois.woka23@gmail.com&su=Let's%20Connect" target="_blank" rel="noopener noreferrer">
+                  <Button size="medium">Chat me!</Button>
                 </a>
             </div>
         </div>
