@@ -95,7 +95,7 @@ onUnmounted(() => {
             <a href="#experiences" @click="closeMenu" class="hover:text-(--tertiary-color)"><li>.experiences()</li></a>
             <a href="#projects" @click="closeMenu" class="hover:text-(--tertiary-color)"><li>.projects()</li></a>
             <a href="#contact" @click="closeMenu" class="hover:text-(--tertiary-color)"><li>.contact()</li></a>
-            <a href="/files/CV-Adrian-Yoris.pdf" target="_blank" rel="noopener noreferrer" @click="closeMenu" class="flex justify-center"><li><Button size="small">Resume</Button></li></a>
+            <a href="/public/files/CV-Adrian-Yoris.pdf" target="_blank" rel="noopener noreferrer" @click="closeMenu" class="flex justify-center"><li><Button size="small">Resume</Button></li></a>
         </ul>
     </div>
 </template>
